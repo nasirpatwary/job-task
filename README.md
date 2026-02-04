@@ -28,14 +28,14 @@ The landing page implements **7 strictly defined sections** for a complete SaaS 
 4.  **Popular Items**: Real-time data fetching from Express API.
 5.  **Testimonials**: Glassmorphic review cards with 3D hover effects.
 6.  **FAQ**: GSAP-animated smooth accordion.
-7.  **Contact**: Zod-validated controlled form with success toasts.
+7.  **Contact**: React-Hook-Form controlled form with success toasts.
 
 ---
 
 ## 🚀 Setup Instructions
 
 ### 1. Installation
-Clone the repository and install dependencies for both client and server:
+Clone the repository and install dependencies for both project:
 ```bash
 # Install project dependencies
 && npm install && npm run dev
