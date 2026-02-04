@@ -13,7 +13,7 @@ A high-performance, production-grade product showcase application built with **N
 | **Animations** | GSAP 3.14 & @gsap/react |
 | **State/Data** | TanStack Query v5 & Axios |
 | **Validation** | React Hook Form & Zod |
-| **Auth/State** | Cookies-next & Next.js Middleware |
+| **Auth/State** | Cookies-next & Next.js Proxy |
 | **Database** | MongoDB & Express API |
 | **Icons** | Lucide-React & React-Icons |
 
