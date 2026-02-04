@@ -1,14 +1,12 @@
 import { getSingleItemsAction } from "@/actions/server/server";
 import Container from "@/shared/Container";
 import Image from "next/image";
-
 const DetailsPage = async ({ params }) => {
   const { id } = await params;
 
   const item = await getSingleItemsAction(id);
-
   if (!item) {
-    return <Container><p className="text-center py-20">Item not found!</p></Container>;
+    return <Container><p className="text-center min-h-[calc(100vh-292px)]">Item not found!</p></Container>;
   }
 
   return (

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 const ItemsCard = ({item}) => {
+
  const { _id, name, description, price, category, imageUrl } = item;
 
   return (
@@ -22,8 +23,8 @@ const ItemsCard = ({item}) => {
         <h2 className="card-title text-xl font-bold text-gray-800">
           {name}
         </h2>
-        <p className="text-gray-600 text-sm line-clamp-2">
-          {description}
+        <p title={description} className="text-gray-600 text-lg">
+          {description.length <= 69 ? description : description.slice(0, 69) +"..."}
         </p>
         
         <div className="flex justify-between items-center mt-4">

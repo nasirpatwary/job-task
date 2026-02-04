@@ -17,7 +17,6 @@ import Logo from "./Logo";
 export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  console.log(pathname);
   
   useEffect(() => {
       setIsMenuOpen(false);

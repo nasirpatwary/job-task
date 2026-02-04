@@ -1,8 +1,7 @@
 'use client';
 import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
 import Container from '@/shared/Container';
-import { gsap, ScrollTrigger } from '@/lib/gsap';
+import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap';
 
  gsap.registerPlugin(ScrollTrigger);
 
@@ -30,12 +29,12 @@ export default function HowItWorks() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="py-10 bg-zinc-50 dark:bg-zinc-900/50">
+    <section ref={container} className="py-10 bg-zinc-50">
       <Container>
-        <h2 className="text-4xl font-bold text-center mb-16">How It Works</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-16">How It Works</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {steps.map((step) => (
-            <div key={step.id} className="step-card group relative p-8 bg-white dark:bg-zinc-950 rounded-3xl border border-zinc-200 dark:border-zinc-800">
+            <div key={step.id} className="step-card group relative p-8 bg-white rounded-3xl border border-zinc-200 dark:border-zinc-800">
               <span className="text-5xl font-black opacity-10 absolute top-4 right-6">{step.id}</span>
               <h3 className="text-xl font-bold mb-4">{step.title}</h3>
               <p className="opacity-70 leading-relaxed">{step.desc}</p>
