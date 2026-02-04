@@ -1,17 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
-const ItemsCard = () => {
+const ItemsCard = ({item}) => {
  const { _id, name, description, price, category, imageUrl } = item;
 
   return (
     <div className="card bg-base-100 shadow-xl border border-gray-200 overflow-hidden group hover:shadow-2xl transition-all duration-300">
-      <figure className="relative h-48 w-full overflow-hidden">
+      <figure className="relative h-54 w-full overflow-hidden">
         <Image
           height={155}
           width={300}
           src={imageUrl}
           alt={name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          className="w-full h-full group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute top-2 right-2 badge badge-primary uppercase text-xs font-bold">
           {category}
@@ -28,7 +28,7 @@ const ItemsCard = () => {
         
         <div className="flex justify-between items-center mt-4">
           <span className="text-2xl font-bold text-green-600">${price}</span>
-          <Link href={`/services/${_id}`}>
+          <Link href={`/items/${_id}`}>
             <button className="btn btn-outline btn-sm btn-primary">
               View Details
             </button>

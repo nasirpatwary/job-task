@@ -12,6 +12,7 @@ import {
 } from "@heroui/react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +34,7 @@ export default function NavbarComponent() {
        
       <NavbarContent justify="start">
         <NavbarBrand>
-          <Link>Nasir DEV</Link>
+          <Logo />
         </NavbarBrand>
       </NavbarContent>
 

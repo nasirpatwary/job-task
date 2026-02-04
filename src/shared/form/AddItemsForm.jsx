@@ -3,11 +3,11 @@ import { useForm } from "react-hook-form";
 import FormField from "./FormField";
 import { FormSelect } from "./FormSelect";
 import { FormTextarea } from "./FormTextarea";
-import { usecreateItemsAction } from "@/hooks/useCollectionDB";
 import { TbFidgetSpinner } from "react-icons/tb";
+import { useCreateItemsAction } from "@/hooks/useCollectionDB";
 
 const AddItemsForm =() => {
-  const {mutateAsync, isPending} = usecreateItemsAction()
+  const {mutateAsync, isPending} = useCreateItemsAction()
   const { handleSubmit, control, reset } = useForm({
     defaultValues: {
       name: "",

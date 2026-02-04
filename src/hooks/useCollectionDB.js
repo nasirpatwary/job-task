@@ -16,18 +16,7 @@ export const useAllItems = () => {
 };
 
 
-
-export const useSingleItem = (itemId) => {
-    const { data: singleItem, isLoading } = useQuery({
-        queryKey: ['item', itemId],
-        queryFn: () => getSingleItemsAction(itemId),
-        enabled: !!itemId 
-    });
-    return {singleItem, isLoading}
-}
-
-
-export const usecreateItemsAction  = () =>{
+export const useCreateItemsAction  = () =>{
     const queryClient = useQueryClient();
     const mutation = useMutation({
     mutationFn: createItemsAction,
